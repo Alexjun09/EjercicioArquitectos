@@ -7,9 +7,13 @@ public class Bano extends Estancias {
 
     }
 
-    public Bano(String nombre, int metros, int puertas, int ventanas, boolean baneraODucha) {
-        super(nombre, metros, puertas, ventanas);
+    public Bano(int metros, int puertas, int ventanas, boolean baneraODucha) {
+        super("Bano", metros, puertas, ventanas);
         this.baneraODucha = baneraODucha;
+    }
+
+    public void mostrarDatos() {
+        System.out.println("El baño tiene: " + metrosCuadrados + " metros cuadrados, " + numeroPuertas + " puertas, " + numeroVentanas + " ventanas y " + isBaneraODucha());
     }
 
     public void setBaneraODucha(boolean baneraODucha) {
@@ -18,9 +22,9 @@ public class Bano extends Estancias {
 
     public String isBaneraODucha() {
         if (baneraODucha) {
-            return "Tiene bañera";
+            return "tiene bañera";
         } else {
-            return "Tiene ducha";
+            return "tiene ducha";
         }
 
     }

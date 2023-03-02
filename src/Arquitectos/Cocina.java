@@ -8,10 +8,18 @@ public class Cocina extends Estancias {
 
     }
 
-    public Cocina(String nombre, int metros, int puertas, int ventanas, boolean tendedero, int metrosTendedero) {
-        super(nombre, metros, puertas, ventanas);
+    public Cocina(int metros, int puertas, int ventanas, boolean tendedero, int metrosTendedero) {
+        super("Cocina", metros, puertas, ventanas);
         this.tendedero = tendedero;
         this.metrosTendedero = metrosTendedero;
+    }
+
+    public void mostrarDatos() {
+        if (tendedero) {
+            System.out.println("La cocina tiene: " + metrosCuadrados + " metros cuadrados, " + numeroPuertas + " puertas, " + numeroVentanas + " ventanas, y " + metrosTendedero + " metros de tendedero");
+        } else {
+            System.out.println("La cocina tiene: " + metrosCuadrados + " metros cuadrados, " + numeroPuertas + " puertas, " + numeroVentanas + " ventanas, y no tiene tendedero");
+        }
     }
 
     public void setMetrosTendedero(int metrosTendedero) {
@@ -27,9 +35,9 @@ public class Cocina extends Estancias {
     }
 
     public String getTendedero() {
-        if (tendedero){
+        if (tendedero) {
             return "Tiene tendedero";
-        }else{
+        } else {
             return "No tiene tendedero";
         }
     }

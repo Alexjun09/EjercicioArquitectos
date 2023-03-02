@@ -7,16 +7,20 @@ public class Hall extends Estancias {
 
     }
 
-    public Hall(String nombre, int metros, int puertas, int ventanas, boolean blindada) {
-        super(nombre, metros, puertas, ventanas);
+    public Hall(int metros, int puertas, int ventanas, boolean blindada) {
+        super("Hall", metros, puertas, ventanas);
         puertaBlindada = blindada;
+    }
+
+    public void mostrarDatos() {
+        System.out.println("El hall tiene: " + metrosCuadrados + " metros cuadrados, " + numeroPuertas + " puertas, " + numeroVentanas + " ventanas y " + getPuertaBlindada());
     }
 
     public String getPuertaBlindada() {
         if (puertaBlindada) {
-            return "Tiene puerta blindada";
+            return "tiene puerta blindada";
         } else {
-            return "No tiene puerta blindada";
+            return "no tiene puerta blindada";
         }
     }
 

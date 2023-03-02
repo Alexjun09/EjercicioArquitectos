@@ -1,19 +1,25 @@
 package Arquitectos;
 
+
 public abstract class Estancias {
     protected String nombre;
     protected int metrosCuadrados;
     protected int numeroPuertas;
     protected int numeroVentanas;
 
-    public Estancias(){
+    public Estancias() {
 
     }
-    public Estancias(String nom, int metros, int puertas, int ventanas){
+
+    public Estancias(String nom, int metros, int puertas, int ventanas) {
         nombre = nom;
         metrosCuadrados = metros;
         numeroPuertas = puertas;
         numeroVentanas = ventanas;
+    }
+
+    public void mostrarDatos() {
+
     }
 
     public void setNombre(String nombre) {
