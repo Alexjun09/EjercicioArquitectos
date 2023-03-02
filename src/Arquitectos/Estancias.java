@@ -1,7 +1,10 @@
 package Arquitectos;
 
-
+/**
+ * Clase abstracta estancias la cual será heredada por las otras
+ */
 public abstract class Estancias {
+    //declaramos los atributos
     protected String nombre;
     protected int metrosCuadrados;
     protected int numeroPuertas;
@@ -11,6 +14,14 @@ public abstract class Estancias {
 
     }
 
+    /**
+     * constructor del objeto estancias al cual todos las clases hijo llamarán con super
+     *
+     * @param nom      el nombre de la estancia
+     * @param metros   los metros cuadrados de la estancia
+     * @param puertas  la cantidad de puertas que tiene la estancia
+     * @param ventanas la cantidad de ventanas que tiene la estancia
+     */
     public Estancias(String nom, int metros, int puertas, int ventanas) {
         nombre = nom;
         metrosCuadrados = metros;
@@ -18,10 +29,14 @@ public abstract class Estancias {
         numeroVentanas = ventanas;
     }
 
+    /**
+     * se declara el metodo mostrarDatos que luego derivarán a los metodos individuales de cada estancia
+     */
     public void mostrarDatos() {
 
     }
 
+    //setters y getters
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
